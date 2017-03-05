@@ -11,7 +11,6 @@ var client = new Twitter({
 var params = {screen_name: 'award2828'};
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
     if (!error) {
-        console.log(tweets.length);
         for(var i = 0; i < tweets.length; i++) {
             if(!tweets[i].retweeted_status)
                 console.log(tweets[i].text)
